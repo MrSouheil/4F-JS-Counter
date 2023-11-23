@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black
+        }
+
+        body>* {
+            border: red 2px solid;
+        }
+
+        .counter {
+            padding: 20px;
+        }
+
+        .output {
+            font-size: 20px;
+            color: white;
+        }
+
+        button {
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: white;
+        }
+    </style>
+    <div class="counter">
+        <h1>Counter App</h1>
+        <div class="output">
+            <p>Count: <span id="count">0</span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="increment()">Increment + </button>
+            <button onclick="decrement()">Decrement - </button>
+            <button onclick="add5()">Add +5 </button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let count = 0;
+ 
+    function increment() {
+        count++;
+        document.getElementById("count").innerHTML = count;
+    }
+
+    function decrement() {
+        count--;
+        document.getElementById("count").innerHTML = count;
+    }
+
+    function add5() {
+        count+=5;
+        document.getElementById("count").innerHTML = count;
+    }
+</script>
